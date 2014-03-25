@@ -386,7 +386,7 @@
         <update startup="nocheck" trigger="allow"/>
         <tdm startup="true" rescan="0 10,25,40,55 * * * ? *" trigger="allow"/>
 
-        <gribConfig datasetTypes="Best LatestFile Files">
+        <gribConfig datasetTypes="Best Latest">
           <filesSort>
             <lexigraphicByName increasing="false"/>
           </filesSort>
