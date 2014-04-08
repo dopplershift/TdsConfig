@@ -66,14 +66,23 @@
   </CatalogServices>
 
   <NetcdfFileCache>
-    <minFiles>100</minFiles>
-    <maxFiles>200</maxFiles>
-    <scour>10 min</scour>
+    <minFiles>50</minFiles>
+    <maxFiles>100</maxFiles>
+    <scour>5 min</scour>
   </NetcdfFileCache>
-
+  <GribCollection>
+    <minFiles>5</minFiles>
+    <maxFiles>10</maxFiles>
+    <scour>5 min</scour>
+  </GribCollection>
+  <TimePartition>
+    <minFiles>5</minFiles>
+    <maxFiles>10</maxFiles>
+    <scour>5 min</scour>
+  </TimePartition>
   <HTTPFileCache>
-    <minFiles>25</minFiles>
-    <maxFiles>40</maxFiles>
+    <minFiles>5</minFiles>
+    <maxFiles>20</maxFiles>
     <scour>10 min</scour>
   </HTTPFileCache>
 
@@ -93,8 +102,9 @@
   <WMS>
     <allow>true</allow>
     <allowRemote>false</allowRemote>
-    <maxImageWidth>2000</maxImageWidth>
-    <maxImageHeight>2000</maxImageHeight>
+    <allowFeatureInfo>true</allowFeatureInfo>
+    <maxImageWidth>5000</maxImageWidth>
+    <maxImageHeight>5000</maxImageHeight>
   </WMS>
 
   <NCISO>
@@ -103,12 +113,6 @@
     <isoAllow>true</isoAllow>
   </NCISO>
 
-  <!-- Viewer>my.package.MyViewer</Viewer -->
-
-  <FmrcInventory>
-    <openType>XML_ONLY</openType>
-  </FmrcInventory>
-
   <!-- nj22Config
     <ioServiceProvider class="edu.univ.ny.stuff.FooFiles"/>
     <coordSysBuilder convention="foo" class="test.Foo"/>
@@ -116,20 +120,32 @@
     <typedDatasetFactory datatype="Point" class="gov.noaa.obscure.file.Flabulate"/>
   </nj22Config -->
 
+  <Netcdf4Clibrary>
+     <libraryPath>/opt/netcdf/lib</libraryPath>
+     <libraryName>netcdf</libraryName>
+   </Netcdf4Clibrary>
+
   <DiskCache>
     <alwaysUse>false</alwaysUse>
     <scour>1 hour</scour>
-    <maxSize>250 M</maxSize>
+    <maxSize>1 G</maxSize>
   </DiskCache>
-
-  <GribIndexing>
-    <setExtendIndex>false</setExtendIndex>
-    <alwaysUseCache>false</alwaysUseCache>
-  </GribIndexing>
 
   <AggregationCache>
     <scour>24 hours</scour>
     <maxAge>30 days</maxAge>
   </AggregationCache>
+
+  <FeatureCollection>
+    <RollingFileAppender>
+      <MaxFileSize>10 MB</MaxFileSize>
+      <MaxBackups>50</MaxBackups>
+      <Level>DEBUG</Level>
+    </RollingFileAppender>
+ </FeatureCollection>
+
+  <GribIndex>
+    <neverUse>true</neverUse>
+  </GribIndex>
 
 </threddsConfig>
