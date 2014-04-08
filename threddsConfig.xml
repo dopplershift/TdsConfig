@@ -23,25 +23,7 @@
     </hostInstitution>
   </serverInformation>
 
-  <contentRoots>
-    <contentRoot>motherlode</contentRoot>
-    <contentRoot>idd</contentRoot>
-  </contentRoots>
-
-  <DataRoots>
-    <idd>/data/ldm/pub</idd>
-  </DataRoots>
-
-  <catalogRoot>topcatalog.xml</catalogRoot>
-  <catalogRoot>testCatalog.xml</catalogRoot>
-
-  <catalogRoot>casestudies/catalog.xml</catalogRoot>
-  <catalogRoot>casestudies/vgeeCatalog.xml</catalogRoot>
-  <catalogRoot>casestudies/ccs034Catalog.xml</catalogRoot>
-  <catalogRoot>casestudies/ccs039Catalog.xml</catalogRoot>
-  <catalogRoot>casestudies/july18_2002cat.xml</catalogRoot>
-
-  <catalogRoot>servers/radarCollections.xml</catalogRoot>
+  <catalogRoot>radar/radarCollections.xml</catalogRoot>
 
   <!--
    * Setup for generated HTML pages.
@@ -139,8 +121,6 @@
     <allow>true</allow>
   </DqcService>
 
-  <!-- added 11/13/2012 jcaron -->
-  <!-- updated path 2013-08-20 sarms -->
   <!-- updated for lead 2014-03-20 jcaron -->
   <Netcdf4Clibrary>
     <libraryPath>/opt/netcdf/lib</libraryPath>
