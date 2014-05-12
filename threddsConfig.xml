@@ -2,7 +2,7 @@
 <threddsConfig>
   
   <serverInformation>
-    <name>THREDDS Data Server</name>
+    <name>Remote Test Data Server</name>
     <logoUrl>/thredds/unidataLogo.jpg</logoUrl>
     <logoAltText>TDS</logoAltText>
 
@@ -22,8 +22,6 @@
       <logoAltText>Unidata</logoAltText>
     </hostInstitution>
   </serverInformation>
-
-  <catalogRoot>radar/radarCollections.xml</catalogRoot>
 
   <!--
    * Setup for generated HTML pages.
